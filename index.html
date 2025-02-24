@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NF1PXQ8S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D0NF1PXQ8S"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-D0NF1PXQ8S');
+    </script>
 
-  gtag('config', 'G-D0NF1PXQ8S');
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Топ фільмів для перегляду: трилери, комедії, сімейні фільми та багато іншого.">
@@ -55,6 +55,12 @@
                 <p>Культова комедія про хлопчика, який залишився вдома сам.</p>
             </article>
         </section>
+
+        <!-- Кнопка "Поділитися" -->
+        <button class="share-btn" aria-label="Поділитися цією сторінкою" onclick="sharePage()">Поділитися</button>
+
+        <!-- Посилання на другу сторінку -->
+        <p><a href="movies.html" class="page-link" onclick="gtag('event', 'click', {'event_category': 'Link', 'event_label': 'Movies Page'});">Перейти до другої частини</a></p>
     </main>
 
     <footer>

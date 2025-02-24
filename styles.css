@@ -43,10 +43,6 @@ h2 {
     color: #333;
 }
 
-article {
-    margin-top: 10px;
-}
-
 article img {
     max-width: 100%;
     height: auto;
@@ -54,10 +50,31 @@ article img {
     margin: 10px 0;
 }
 
+.share-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.share-btn:hover {
+    background-color: #555;
+}
+
+.page-link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 footer {
     background: #333;
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
 }

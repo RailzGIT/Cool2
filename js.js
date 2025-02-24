@@ -1,14 +1,14 @@
-document.addEventListener("DOMContentLoaded", function () {
-    console.log("Сайт завантажено!");
-
-    const navLinks = document.querySelectorAll("nav ul li a");
-
-    navLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        });
-    });
-});
+function sharePage() {
+    if (navigator.share) {
+        navigator.share({
+            title: document.title,
+            url: window.location.href
+        }).catch(error => console.error('Помилка під час поширення:', error));
+    } else {
+        // Якщо браузер не підтримує Web Share API – копіюємо посилання в буфер обміну
+        const url = window.location.href;
+        navigator.clipboard.writeText(url).then(() => {
+            alert('Посилання скопійовано! Поділіться ним вручну.');
+        }).catch(error => console.error('Не вдалося скопіювати:', error));
+    }
+}
